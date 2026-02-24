@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Management System</h1>
+    <h2>Entered Student Details</h2>
+
+    <div class="card">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Age:</strong> <span id="age"></span></p>
+        <p><strong>Register Number:</strong> <span id="regno"></span></p>
+        <p><strong>Department:</strong> <span id="dept"></span></p>
+    </div>
+
+    <a href="index.html" class="back-btn">Enter Another Student</a>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("age").textContent = params.get("age");
+    document.getElementById("regno").textContent = params.get("regno");
+    document.getElementById("dept").textContent = params.get("dept");
+</script>
+
+</body>
+</html>
